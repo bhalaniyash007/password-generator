@@ -22,7 +22,9 @@ export default function Home() {
 
   return (
     <main>
-      <h1>Generate Strong Password</h1>
+      <h1 className="font-poppins font-bold text-lg">
+        Generate Strong Password
+      </h1>
       <br />
       <input
         type="text"
