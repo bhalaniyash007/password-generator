@@ -30,6 +30,10 @@ const config: Config = {
       }
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')({
+      className: 'typography',
+    }),
+  ]
 }
 export default config
