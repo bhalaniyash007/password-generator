@@ -34,7 +34,7 @@ export default function Home() {
             <Stack direction="row" spacing={2}>
               <Heading text="Generate" color="text-white-300" />
               <span
-                className={`typography-headings text-5xl text-orange-100 font-extrabold font-poppins line-through`}
+                className={`typography-headings text-5xl text-orange-200 font-extrabold font-poppins line-through`}
               >
                 Random
               </span>

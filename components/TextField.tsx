@@ -30,7 +30,7 @@ const TextField = (props: TextFieldProps) => {
       <OutlinedInput
         placeholder="Password"
         fullWidth
-        className="bg-gray-100 font-poppins"
+        className="bg-gray-100 font-poppins font-bold"
         value={value}
         readOnly={true}
         endAdornment={
