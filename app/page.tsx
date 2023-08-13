@@ -1,8 +1,12 @@
 "use client";
+import { Button, Heading, TextField } from "@components";
+import useCopyToClipboard from "@hooks/copyToClipboard";
+import { Stack } from "@mui/material";
 import { useState } from "react";
 
 export default function Home() {
   const [password, setPassword] = useState("");
+  const [copyValue, setCopyValue] = useCopyToClipboard();
   const generatePassword = (length: number): string => {
     const characters =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
@@ -22,21 +26,40 @@ export default function Home() {
 
   return (
     <main>
-      <h1>Generate Strong Password</h1>
-      <br />
-      <input
-        type="text"
-        placeholder="password"
-        value={password}
-        className="border-2 border-gray-500"
-      />
-      <br />
-      <button
-        className="p-5 border-2 border-gray-500"
-        onClick={generatePasswordHandler}
-      >
-        Generate
-      </button>
+      {/* <div className="container flex justify-center place-content-center align-middle text-left">
+        <div className="container flex flex-col m-auto"> */}
+      <div className="flex h-screen  items-center bg-purple-300">
+        <div className="flex justify-start flex-col  text-left m-40">
+          <Stack direction="column" spacing={2}>
+            <Stack direction="row" spacing={2}>
+              <Heading text="Generate" color="text-white-300" />
+              <span
+                className={`typography-headings text-5xl text-orange-200 font-extrabold font-poppins line-through`}
+              >
+                Random
+              </span>
+            </Stack>
+            <Stack direction="row" spacing={2}>
+              <Heading text="Strong" color="text-orange-300" />
+              <Heading text="Password" color="text-orange-100" />
+            </Stack>
+            <br />
+            <TextField
+              label="text field"
+              value={password}
+              onChange={() => {}}
+              onClickHandler={() => setCopyValue(password)}
+              type={"text"}
+            />
+            <br />
+            <Button
+              text={"Generate"}
+              disableElevation={true}
+              onClickHandler={generatePasswordHandler}
+            />
+          </Stack>
+        </div>
+      </div>
     </main>
   );
 }
