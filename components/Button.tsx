@@ -15,6 +15,7 @@ const Button = (props: ButtonProps) => {
     text,
     onClickHandler,
   } = props;
+
   return (
     <>
       <MuiButton
