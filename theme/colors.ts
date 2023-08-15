@@ -4,12 +4,15 @@ export const COLOR_PALLETE = {
        200: "#19A7CE",
        300: "#3D52D5",
        400: "#146C94",
+       500: "#19212d"
        
     },
     gray: {
         100: '#F6F1F1'
     },
     green: {
+        100: "#316868",
+        DEFAULT: "#316868",
         300: '#03C988'
     },
     white: {

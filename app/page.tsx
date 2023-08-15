@@ -3,7 +3,7 @@ import { Button, Heading, TextField } from "@components";
 import useCopyToClipboard from "@hooks/copyToClipboard";
 import { Stack } from "@mui/material";
 import { useState } from "react";
-
+import BoltIcon from "@mui/icons-material/Bolt";
 export default function Home() {
   const [password, setPassword] = useState("");
   const [copyValue, setCopyValue] = useCopyToClipboard();
@@ -26,9 +26,7 @@ export default function Home() {
 
   return (
     <main>
-      {/* <div className="container flex justify-center place-content-center align-middle text-left">
-        <div className="container flex flex-col m-auto"> */}
-      <div className="flex h-screen  items-center bg-purple-300">
+      <div className="flex h-screen  items-center bg-blue-500">
         <div className="flex justify-start flex-col  text-left m-40">
           <Stack direction="column" spacing={2}>
             <Stack direction="row" spacing={2}>
@@ -54,7 +52,6 @@ export default function Home() {
             <br />
             <Button
               text={"Generate"}
-              disableElevation={true}
               onClickHandler={generatePasswordHandler}
             />
           </Stack>
